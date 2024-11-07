@@ -1,0 +1,134 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%; /* Set width to 100% by default */
+    padding: 1rem;
+    margin-top: 5%;
+    background-color: #0f1519;
+    border: 1px solid pink;
+}
+
+/* Sidebar title */
+.sidebar__h2 {
+    color: #eff68b;
+    font-size: 3rem;
+    text-align: center;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar items wrapper */
+.sidebar__three {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left by default */
+    width: 100%;
+}
+
+/* Sidebar menu styles */
+.sidebar__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar link styles */
+.sidebar__link {
+    display: inline-block;
+    font-size: var(--size-lg);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--clr-word, #b0b0b0); /* Default color if variable not defined */
+    padding: 10px 24px;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background-color 0.2s;
+    
+}
+
+/* Hover effect for links */
+.sidebar__link:hover {
+    color: #84bfec;
+    background-color: #20292e;
+}
+
+/* xs */
+/* @media (min-width: 475px) {
+
+} */
+
+/* sm */
+/* @media (min-width: 640px) {
+
+} */
+
+/* md */
+/* @media (min-width: 768) {
+
+} */
+
+/* lg */
+/* @media (min-width: 1024px) {
+
+} */
+
+/* Styles for smaller screens (less than 1240px) */
+@media (max-width: 1239px) {
+    .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        width: 100%; /* Full width */
+        padding: 1rem;
+    }
+
+    .sidebar__three {
+        align-items: center; /* Center items horizontally */
+        width: auto;
+    }
+
+    .sidebar__menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .sidebar__link {
+        padding: 10px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* xl */
+@media (min-width: 1240px) {
+    /* .sidebar__h2 {
+        color: #eff68b;
+        font-size: 3rem;
+    } */
+
+    .sidebar {
+        width: 800px; /* Fixed width for larger screens */
+        height: 100vh; /* Full height */
+        position: fixed; /* Fix it to the left side of the viewport */
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 4rem;
+        gap: 1rem;
+    }
+
+    .sidebar__menu {
+        flex-direction: column;
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+
+} */
